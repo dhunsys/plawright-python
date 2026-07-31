@@ -1,0 +1,19 @@
+str = "Shahabuddin"
+str1 = "Mohd"
+str2="hahab"
+str3= "Hello.World"
+print(str[1])
+print(str[0:5]) #substring
+print(str+str1) #oncat
+print(str2 in str)# contains
+
+var=str3.split(".")
+print(var)
+print(var[0])
+
+str4= " Hello "
+print(str4.strip()) # trim
+print(str4.lstrip()) # l trim
+print(str4.rstrip()) # r trim
+
+

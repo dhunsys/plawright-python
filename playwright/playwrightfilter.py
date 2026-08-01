@@ -16,12 +16,6 @@ def test_verify_option_sorted(page: Page):
 def test_verify_check(page: Page):
     page.goto("https://testingsrc.blogspot.com/")
     page.locator("//h2[text()='Checkboxes']").scroll_into_view_if_needed()
-    # Collect all checkboxes
-    # travelling = page.locator("input[type='checkbox']")
-    # travelling=travelling.filter(has_text="sports")
-    # print(travelling.inner_text())
-    # travelling.check()
-    # expect(travelling).to_be_checked()
     checkboxes = page.get_by_role("checkbox")
     for i in range(checkboxes.count()):
         cb = checkboxes.nth(i)

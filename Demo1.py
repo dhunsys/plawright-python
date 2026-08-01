@@ -13,3 +13,4 @@ print("""install playwright: 1. pip install pytest-playwright
 2. pip install playwright
 """)
 print("""Run playwright test in heahed mode pytest <x.py>::<testName> --headed""")
+print("""code gen cms: playwright codegen <url>""")

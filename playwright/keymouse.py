@@ -2,10 +2,6 @@ import time
 
 from playwright.sync_api import Page, Playwright, expect
 
-import time
-
-from playwright.sync_api import Page, Playwright, expect
-
 
 def test_verify_hover(page: Page):
     page.goto("https://testingsrc.blogspot.com/")

@@ -9,8 +9,8 @@ print("Run a test in python file with tag: pytest -m <tag>")
 print("Run a test in python file with tag: pytest -m smoke")
 print("Run a test in python file with multiple tag: pytest -m smoke or regression")
 
-print("""install playwright: 1. pip install pytest-playwright
-2. pip install playwright
+print("""install play_wright: 1. pip install pytest-play_wright
+2. pip install play_wright
 """)
-print("""Run playwright test in heahed mode pytest <x.py>::<testName> --headed""")
-print("""code gen cms: playwright codegen <url>""")
+print("""Run play_wright test in heahed mode pytest <x.py>::<testName> --headed""")
+print("""code gen cms: play_wright codegen <url>""")

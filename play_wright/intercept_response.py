@@ -8,7 +8,7 @@ fake_response = {"data": [],
                  "message": "No orders"}  #This is response from server when there is no order in system. Make it same as server
 
 
-#Browser login->click order->server->response->intercept->response->browser->verify response using playwright
+#Browser login->click order->server->response->intercept->response->browser->verify response using play_wright
 def intercept_response(route):
     route.fulfill(
         json=fake_response
@@ -23,7 +23,7 @@ def test_verify_api(playwright: Playwright):
     api = APIUtils()
     orderiId = api.createOrder(playwright)
     print("order id", orderiId)
-    # now use GUI to check order is is placed in order page. Next is playwright
+    # now use GUI to check order is is placed in order page. Next is play_wright
     # page.goto("https://testingsrc.blogspot.com/")
     # # get frame
     # page.locator("#menuItem").hover()

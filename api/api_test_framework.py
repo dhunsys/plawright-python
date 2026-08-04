@@ -80,3 +80,7 @@ def test_verify_api_create_order_verify_from_ui_data_pageobject(playwright: Play
 
     #expect(page.locator("p[class='tagline']")).to_contain_text("Thank you for Shopping With Us")
     browser.close()
+
+#call page fixture in conftest.py
+def test_login(page):
+    page.goto("https://www.google.com")

@@ -14,3 +14,5 @@ print("""install play_wright: 1. pip install pytest-play_wright
 """)
 print("""Run play_wright test in heahed mode pytest <x.py>::<testName> --headed""")
 print("""code gen cms: play_wright codegen <url>""")
+print("""to install python playwright package: pip install playwright""")
+print("""To install browser binaries for playwright: python -m playwright install""")

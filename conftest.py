@@ -36,6 +36,7 @@ def browser(browser_name):
     with sync_playwright() as p:
 
         if browser_name == "chromium":
+
             browser = p.chromium.launch(headless=False)
 
         elif browser_name == "firefox":

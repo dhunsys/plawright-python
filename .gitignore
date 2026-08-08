@@ -29,6 +29,12 @@ trace.zip
 *.zip
 *.tar
 *.tar.gz
+*.html
+
+
+# --- Allure ---
+# Test results and reports
+allure-results/
 
 # --- Pytest ---
 .cache/

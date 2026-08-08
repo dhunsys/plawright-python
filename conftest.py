@@ -6,10 +6,10 @@ from playwright.sync_api import sync_playwright
 # register to listent comd line argument --browser,--headed,--device are built in so no need to register
 def pytest_addoption(parser):
     # parser.addoption(
-    #     # "--browser",
-    #     # action="store",
-    #     # default="chromium",
-    #     # help="Browser to run tests against"
+    #     "--browser",
+    #     action="store",
+    #     default="chromium",
+    #     help="Browser to run tests against"
     # )
     parser.addoption(
         "--api-url",
@@ -30,11 +30,16 @@ def api_context(playwright,request):
 def browser_name(request):
     return request.config.getoption("--browser")
 
+#return --web_url passed in cmd line to test using this fixture
+@pytest.fixture(scope="session")
+def web_url(request):
+    return request.config.getoption("--web_url")
+
 # call fixture to get browser_name
 @pytest.fixture(scope="session")
 def browser(browser_name):
     with sync_playwright() as p:
-
+        print(f"Fixture value: {browser_name}")
         if browser_name == "chromium":
 
             browser = p.chromium.launch(headless=False)
@@ -52,7 +57,8 @@ def browser(browser_name):
 
         browser.close()
 
-#call above fixture browser, and get browser object
+#call above fixture browser, and get browser object. scope is function so that if a test runs more than once with different data, new page is created for each
+#always function scope in parallel
 @pytest.fixture(scope="function")
 def page(browser):
     context = browser.new_context()
